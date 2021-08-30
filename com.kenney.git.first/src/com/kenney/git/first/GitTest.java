@@ -4,6 +4,6 @@ public class GitTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Learning git right now \ntosave exercises\n on github.");
+		System.out.println("Learning git right now \nto save exercises\n on github.");
 	}
 }
