@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+	public class LargerThanEqualTo{
+		
+		public static void main(String[] args){
+		Scanner scan = new Scanner (System.in);
+		String first = "Give the first number: ";
+		String second = "Give the second number: ";
+		String greater = "Greater number is: ";
+		String number = scan.nextLine();
+		
+		System.out.println(first);
+		int firstOne = Integer.valueOf(number);
+		System.out.println(second);
+		int secondOne = Integer.valueOf(number);
+		System.out.println(greater + "");
+		
+		
+		
+		}
+	}

@@ -1,0 +1,83 @@
+import java.util.Scanner;
+
+public class multipleChoice{
+	public static void main(String[] args){
+	Scanner reader = new Scanner(System.in);
+	
+	String theQuestion = "Which of the following programming languages are you learning?";
+	String multiChoice = "a) HTML\nb) JavaScript\nc) Java";
+	boolean notCorrect = true;
+	String notCorrect2 = "I'm sorry, but that is incorrect. Please don't give up and try again.";
+	String inCorrect = "a";
+	String inCorrect2 = "b";
+	String correct = "c";
+	System.out.println("Answer the following question below:");
+	
+	while(notCorrect){
+		System.out.println(theQuestion);
+		System.out.println(multiChoice);
+		String response = reader.nextLine();
+	 if (response == inCorrect){
+		System.out.println(notCorrect2);
+		//THIS IS THE REASON THE CODE DIDN'T WORK FOR ALL THESE MONTH - THE PARAMETER HAS == AS A FUNCTION THAT ONLY WORKS FOR PRIMITIVE DATA TYPE AND A STRING IS NOT THAT
+		//THE CORRECT ONE WOULD BE IF(response.equals(correct))
+	} else if (response == inCorrect2){
+		System.out.println(I'm sorry, but that is incorrect. Please don't give up and try again.);
+	} else if (response == correct){
+		notCorrect == false;
+		System.out.println("Congrats, you're right! Good luck on learning Java and Hello World!");
+	}	
+		
+		
+	}
+	
+	}
+
+}
+
+
+import java.util.Scanner;
+
+public class multipleChoice{
+	public static void main(String[] args){
+	Scanner scan = new Scanner(System.in);
+	
+	String theQuestion = "Which of the following programming languages are you learning?";
+	String multiChoice = "a) HTML\nb) JavaScript\nc) Java";
+	String right = "c";
+	String notCorrect2 = "I'm sorry, but that is incorrect. Please don't give up and try again.";
+	System.out.println(theQuestion);
+	System.out.println(multiChoice);
+	System.out.println("Answer the following question below:");
+	String answer = scan.nextLine();
+	
+	while (answer != right){
+	boolean notCorrect == true;
+	}
+	
+	if(notCorrect != false){
+	System.out.println("Congrats, you're right! Good luck on learning Java and Hello World!");
+	
+	}else {
+	System.out.println(notCorrect2);
+	System.out.println(theQuestion);
+	System.out.println(multiChoice);
+	System.out.println(answer);
+	
+	}
+	
+	
+	while(true){
+	print question 
+	print choices
+	get input
+		if (input != correct){
+		boolean = true
+		} else if{
+		input == correct
+		boolean = false
+		}
+	
+	
+	}
+	

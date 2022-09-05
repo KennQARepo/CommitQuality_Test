@@ -1,0 +1,22 @@
+reviewingJava_part02
+
+public class Main {
+  public static void main(String[] args) {
+    
+    int x = 0, y = 1, z = 1;
+    int i = (int)(Math.random()*20);
+    System.out.println(i);
+    
+    while(x <= i){
+    	++x;
+        System.out.println("X is "+ x);
+        y *= x*z;
+    	}
+    		System.out.println("Times the total " + y);
+            System.out.println(5%2);
+            System.out.println(6%4);
+    
+    
+  		}
+	}
+

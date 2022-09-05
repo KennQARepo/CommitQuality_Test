@@ -1,0 +1,27 @@
+import java.util.Sacnner;
+
+public class multipleChoice{
+	public static void main(String[] args){
+	Scanner reader = new Scanner(System.in);
+	
+	String theQuestion = "Which of the following programming languages are you learning?";
+	String multiChoice = "a) HTML\nb) JavaScript\nc) Java";
+	boolean notCorrect = true;
+	String correct = "c";
+	System.out.println("Answer the following question below:");
+	
+	while(notCorrect){
+		System.out.println(theQuestion);
+		System.out.println(multiChoice);
+		String response = reader.nextLine();
+	} if (response != correct){
+		System.out.println("I'm sorry, but that is incorrect. Please don't give up and try again.");
+		notCorrect = true;
+	} else if (response == correct){
+		notCorrect = false;
+		System.out.println("Congrats, you're right! Good luck on learning Java and Hello World!");
+	}
+	
+	}
+
+}

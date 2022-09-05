@@ -1,0 +1,53 @@
+/**Sum_of_Sequence_exercise
+*practice from my own to understand
+*using the "while" loop in lieu of the "for" loop 
+*for the sake of the comprehensive foundation or structure of both loops
+*/
+
+
+// Online IDE - Code Editor, Compiler, Interpreter
+import java.util.Scanner;
+public class Mainy
+{
+    public static void main(String[] args) {
+        System.out.println("Give 2 inputs:");
+        Scanner scan = new Scanner(System.in);
+        
+        int first = scan.nextInt();
+        int second = scan.nextInt();
+        int count= 0;
+        int addUp = 0;
+        double avg = 0;
+        
+        while(second != 0){
+            
+            if(first > second){
+                System.out.println("The first input should be higher than the second input. \nPlease try again.");
+                first = scan.nextInt();
+                second = scan.nextInt();
+                
+            }else if(first < second){
+                count++;
+                addUp += first;
+                first++;
+                System.out.println("Count is "  + count);
+                System.out.println("The first input becomes " + first);
+                System.out.println("Input added with the previous is " + addUp);
+                
+                //avg = addUp/count;
+                continue;
+            }else{
+                count++;
+                addUp += first;
+                //first++;
+                System.out.println("Input added with the previous is " + addUp);
+                System.out.println("The first input becomes " + first);
+                avg = addUp/count;
+                break;
+            }
+        }
+        System.out.println(avg);
+        
+        
+    }
+}

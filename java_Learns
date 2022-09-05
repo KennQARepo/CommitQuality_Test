@@ -1,0 +1,323 @@
+/**
+*learningJava_thruPractice
+*/
+
+public class Program {
+    public static void main(String[] args) {
+        //int age = 102;
+        
+        int age = (int)(Math.random() * 120);
+        //System.out.println("You're " + age +".");
+        String year = "You're " + age +".";
+        
+        if(age <= 0) {
+            System.out.println("Error");
+            System.out.println(year);
+        } else if(age <= 16) {
+            System.out.println("Too Young");
+            System.out.println(year);
+        } else if(age < 100) {
+            System.out.println("Welcome!");
+            System.out.println(year);
+        } else if(age <=110) {
+            System.out.println("Hahaha, Wow! You're really old!");
+            System.out.println(year);
+        }  else {  
+            System.out.println("Really?");
+            System.out.println(year);
+        }
+    }
+}
+
+//Even or Odd//
+
+
+import java.util.Scanner;
+
+public class OddOrEven {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Give a number:");
+        int num = Integer.valueOf(scan.nextLine());
+        int oddEven = num % 2;
+        int oE = (oddEven % 2);
+        
+        if(oE == 0){
+            System.out.println(num + " is even");
+        }else {
+            System.out.println(num + " is odd");
+        }
+        
+    }
+}
+
+
+// Online IDE - Code Editor, Compiler, Interpreter//////
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args) {
+        //System.out.println("Type something");
+        Scanner scan = new Scanner(System.in);
+        /*
+        String write = scan.nextLine();
+        
+        System.out.println("You wrote " + write);
+        */
+        System.out.println("Give a number btw 1 & 100");
+        int num = Integer.valueOf(scan.nextLine());
+        //System.out.println(num);
+        //System.out.println(num % 3);
+        int first = (num % 3);
+        int second = (num % 5);
+        System.out.println(first);
+        System.out.println(second);
+        System.out.println(first & second);
+        //'&' is the logical symbol 
+        //and 
+        //compares the value of 'first' and 'second' where 1 is true and 0 is false
+         if(first ==0 && second == 0){
+            System.out.println("FizzBuzz");
+        }else if(first == 0){
+            System.out.println("Fizz");
+        }else if (second == 0){
+            System.out.println("Buzz");
+        }else{
+            System.out.println("3 or 5");
+        }
+        
+        /*
+        if(first == 0 && second == 0){
+            System.out.println("divisble by 3 or 5");
+        }else{
+            System.out.println("Not divisble by either");
+        }
+        */
+        /*
+        if(num % 3){
+            System.out.println("Frizz");
+        }else if (num % 5){
+            System.out.println("Buzz");
+        }else{
+            System.out.println(num);
+        }
+        */
+    }
+}
+
+
+===LeapYear_Exercise===
+
+
+import java.util.Scanner;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Give a year:");
+        int year = Integer.valueOf(scan.nextLine());
+        
+        if(year % 4 == 0 && year % 100 != 0){
+            System.out.println("This is a leap year");
+        }else if(year % 400 == 0){
+            System.out.println("This is a leap year");
+        
+        }else {
+            System.out.println("This is not a leap year");
+        }
+    }
+}
+
+
+===Guess a number for a certain time/amount===
+
+
+import java.util.Scanner;
+
+public class AreWeThereYet {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        //System.out.println("Give a number:");
+        int x = 0;        
+        while(x < 3){
+            
+            x++;
+            System.out.println("Give a number:");
+            int num = Integer.valueOf(scanner.nextLine());
+            if(num == 4){
+                System.out.println("Ding, Ding!");
+                break;
+            }
+            
+        }
+        
+    }
+}
+
+(Number_Of_Numbers_exercise: part02_08)
+import java.util.Scanner;
+
+public class NumberOfNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        //My Interpretation, but it is marked INCORRECT!
+        //System.out.println("Give a number:");
+        int num = 0;
+        int numSum = num++;
+        
+        while(true){
+            System.out.println("Give a number:");
+            int num1 = Integer.valueOf(scanner.nextLine());
+            if(num1 < 0){
+                numSum = num++;
+                //System.out.println(num1);
+            }else if(num1 > 0){
+                numSum = num++;
+                //System.out.println(num1);
+                continue;
+            }else{
+                break;
+            }
+        }
+        System.out.println("Number of numbers:" + numSum);
+        //THIS IS THE ERROR                 ^^^
+        /*CORRECT Answer is
+        System.out.println("Number of numbers: " + numSum);
+        */
+        //SEE THE DIFFERENCE?!
+    }
+}
+
+
+===for loop_ part02_19===
+
+import java.util.Scanner;
+
+public class Counting {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = Integer.valueOf(scanner.nextLine());
+        
+        while(num <= 0){
+            System.out.println("Number must be higher, please try again.");
+            num = Integer.valueOf(scanner.nextLine());
+        }
+        for(int x = 0; x <= num; x++){
+            System.out.println(x);
+        }
+        System.out.println("Done");
+    }
+}
+
+====^^^for loop part02_19^^^=====
+
+
+[][][][][][][]Array[][][][][][]
+public class Program {
+    public static void main(String[] args) {
+        int [ ] myArr = {6, 42, 3, 7};
+        int sum=0;
+        for(int x=0; x<myArr.length; x++) {
+            sum += myArr[x];
+            /*
+            sum PLUS the assigning of the Array index
+            As int x increases in increments, it runs through the array by the length method
+            as the index increases the variable or data of that index is 
+            ADDED & Assigned to the SUM
+            */
+        }
+        System.out.println(sum);
+    }
+}
+
+
+//**//Loan Calculator//**// [Use a do loop]
+
+You take a loan from a friend and need to calculate how much you will owe him after 3 months.
+You are going to pay him back 10% of the remaining loan amount each month.
+Create a program that takes the loan amount as input, calculates and outputs the remaining amount after 3 months.
+
+Sample Input:
+20000
+
+Sample Output:
+10628
+
+Here is the monthly payment schedule:
+Month 1
+Payment: 10% of 20000 = 2000
+Remaining amount: 18000
+Month 2
+Payment: 10% of 18000 = 1800
+Remaining amount: 16200
+Month 3:
+Payment: 10% of 16200 = 1620
+Remaining amount: 14580
+Use a loop to calculate the payment and remaining amounts for each month.
+Also, use integers for amounts.
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+import java.util.Scanner;
+// Online IDE - Code Editor, Compiler, Interpreter
+
+public class Loan
+{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("How much are you asking for?");
+        double loan = Double.valueOf(scan.nextLine());
+        int month = 0;
+        while(month < 4){
+            month = month + 1;
+            
+            if(month > 3){
+                break;
+            }else{
+            loan = (loan -(loan * 0.10));
+            //month = month++;
+            System.out.println(loan);
+            }
+        }
+    }
+}
+
+//===First attempt at creating Method and "to the power" method====////
+import java.util.Scanner;
+
+public class Main
+{
+    public static int plusFive(int x){
+        return x + 5;
+    }
+    public static void main(String[] args) {
+        System.out.println("Pick any number, but choose correctly");
+        Scanner scan = new Scanner(System.in);
+        
+        int num = scan.nextInt();
+        
+        System.out.println("Not quite, please try again");
+        
+        while(num != 0){
+            num = scan.nextInt();
+            if(num < 0 || num > 0){
+                System.out.println((int)Math.pow(num,2));
+                //Changes the input value to the "second power", plus changes type to an "Integer"
+                System.out.println("Try again, please");
+                continue;
+                }else{
+                System.out.println("Correct!");
+                break;
+            }
+        }
+        int newValue = plusFive(num);
+        System.out.println("High " + newValue + " !"); 
+        //Created the method (See above) to add 5 to the returning value of the "correct" input value
+    }
+}
