@@ -321,3 +321,43 @@ public class Main
         //Created the method (See above) to add 5 to the returning value of the "correct" input value
     }
 }
+
+
++++====Modulus "for" loop====+++
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        System.out.println("Find the number and seprate the guess attempts by even & odds");
+        Scanner scan = new Scanner(System.in);
+        
+        int a = 0, b = 0, c = 0;
+        //"Even" attempts 'C'
+        //"Odd" attempts 'b'
+        double x = 1, y = 1, z = 1;
+        
+        double oddEven = Double.valueOf(scan.nextLine());
+        
+         for(x = 1; oddEven < -1 || oddEven > -1.0; x++){
+        
+        //for(x = 1; oddEven != -1; x++){ //This probably could work but the (condition) was an endless/infinite loop by its FIRST input
+            a = (int)oddEven%2;
+            
+            y *= oddEven*z;
+            
+            if(a%2 == 2){
+                c++;
+            }else{
+                b++;
+            }
+            oddEven = Double.valueOf(scan.nextLine());
+            //Let's see - - without this, the first input will be definitive, making an endless loop 
+        }
+        System.out.println("Total attempts were: " + x);
+        System.out.println("Even attempts were: " + c + " Odds were:  " + b);
+        System.out.println("Average of the input in multiplication is: " + y/x);
+    }
+}
+
