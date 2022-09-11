@@ -53,6 +53,31 @@ public class OddOrEven {
     }
 }
 
+///Difference between Length w/ paramater & length w/o parameters///
+class length_of_String {
+    public static void main(String[] args) {
+        String greeting = "Hello World";
+        System.out.println("The length of greeting is: " + greeting.length());
+        String[] greet = greeting.split(" ");
+        System.out.println(greet[0]);
+        System.out.println(greet[1]);
+        
+        
+        int greet1 = greet[0].length();
+        int greet2 = greet[1].length();
+        //Length method requires a parameter here because it is counting the string array
+
+        System.out.println(greet1);
+        System.out.println(greet2);
+        //Each one will print a total of 5 but total is 11, the space; which counts as an index, was not counted.
+        
+        char[] hi = greeting.toCharArray();
+        int num = hi.length;
+        //Length method DOES NOT require a parameter here because it is counting a Char.
+
+        System.out.println(num);
+
+    }
 
 // Online IDE - Code Editor, Compiler, Interpreter//////
 import java.util.Scanner;
