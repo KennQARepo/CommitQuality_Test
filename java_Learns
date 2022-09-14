@@ -386,3 +386,34 @@ public class Main
     }
 }
 
+import java.util.Scanner;
+class MyClass {
+
+    public static void main(String[ ] args) {
+    Scanner scan = new Scanner(System.in); 
+    System.out.println("How many odds and evens until the range is complete");
+    int x = 1, y = 1, z = 1, even = 0, odd= 0;
+    int num = scan.nextInt();
+    for(x = 1; x < num; x++){
+        y *= x*z;
+        System.out.println(y);
+        int evenOdds = y%2;
+        int oddEvens = evenOdds%2;
+        //System.out.println(evenOdds);
+        //System.out.println(oddEvens);
+        
+        if(oddEvens == 0){
+            System.out.println(y + " is even");
+            even++;
+        }else{
+            System.out.println(y + " is Odd");
+            odd++;
+        }
+        
+        System.out.println("There are "+ even + " even");
+        System.out.println("There are "+ odd + " odd");
+    }
+
+
+    }    
+}
