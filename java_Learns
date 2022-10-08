@@ -53,12 +53,18 @@ public class OddOrEven {
     }
 }
 
-///Difference between Length w/ paramater & length w/o parameters///
+///Difference between Length w/ parameter & length w/o parameters///
 class length_of_String {
     public static void main(String[] args) {
         String greeting = "Hello World";
         System.out.println("The length of greeting is: " + greeting.length());
         String[] greet = greeting.split(" ");
+        //This will create a split in the words into array items
+        //But using 
+        //String[] greet = greeting.split("");
+        //**Notice the difference between the two
+        //Will give a different result
+        //Try to figure out the what it is mentally
         System.out.println(greet[0]);
         System.out.println(greet[1]);
         
@@ -417,3 +423,120 @@ class MyClass {
 
     }    
 }
+
+import java.util.Scanner;
+public class Terinary {
+    public static void main(String args[]) {
+    Scanner scan = new Scanner(System.in);    
+      System.out.println("Enter a number to see if it is greater than ours");
+      
+      int x=(int)(Math.random()*100);
+      int y = scan.nextInt();
+      String size = (x > y) ? "Our's is bigger, Now YIELD!!!":"Yours is BIGGER, I admit defeat.";
+      
+      if(y > x){
+      System.out.println(size + " Mine was " + x + "\nYou are KING!");
+      }
+      else{
+        System.out.println(size);  
+      }
+    }
+}
+
+//SOLUTION for Educative.IO Challenge 2: What Day is it
+
+case 1: answer = "Monday";
+                System.out.println(answer);
+                break;
+        case 2: answer = "Tuesday";
+                System.out.println(answer);
+                break;
+        case 3: answer = "Wednesday";
+                System.out.println(answer);
+                break;
+        case 4: answer = "Thursday";
+                System.out.println(answer);
+                break;
+        case 5: answer = "Friday";
+                System.out.println(answer);
+                break;
+        case 6: answer = "Saturday";
+                System.out.println(answer);
+                break;
+        case 7: answer = "Sunday";
+                System.out.println(answer);
+                break;
+
+///Practiced _Method of using scanner for average==
+import java.util.Scanner;
+public class Practice_Practice {
+
+	public static int numAvg(int num1, int num2, int num3) {
+		int addSet = num1 + num2 + num3;
+		int avgSet = (int)(addSet/3);
+		System.out.println("The average of your number is: ");
+		return avgSet;
+	} 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		int x, y, z = 0; 
+		x =	scan.nextInt();
+		y = scan.nextInt();
+		z = scan.nextInt();
+		System.out.println("You've entered: " + z + ", " + y +", " + x);
+		int numSet = numAvg(x, y, z);
+		System.out.println(numSet);
+	}
+
+}
+
+import java.util.Scanner;
+
+public class EvenOfOddity {
+	
+	public static void oddEvens(int a) {
+			/*
+	        int num = (int)(Math.random()*7);
+	        if(num == 0){
+	            num = (int)(Math.random()*7);
+	            //continue;
+	        }
+	        */
+	        int numIt = a%2;
+	        int numThis = numIt%2;
+	        if(numThis == 0){
+	        	System.out.println("EVEN");
+	        }else {
+	        	System.out.println("ODD");
+	        }
+		
+	} 
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a number to check if it is an Even or Odd");
+		int answer = Integer.valueOf(scan.nextLine());
+		
+		oddEvens(answer);
+		System.out.println("Enter a text");
+		String text = scan.nextLine();
+		
+		
+		System.out.println("Enter a number");
+		//int num = scan.nextInt();
+		//This ^^^ will cause the following string scanner method to freeze the command
+		//Instead use the following to use both method
+		int num = Integer.valueOf(scan.nextLine());
+		
+		
+		
+		System.out.println("Enter another text");
+		String text2 = scan.nextLine();
+		//This will not work ^^^ because the previous scanner was asking for an next (\n) integer
+		//Must clear the scanner of the next line command (must clear the \n in the "next" method of scanner)
+	}
+
+}
+
