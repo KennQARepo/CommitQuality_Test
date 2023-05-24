@@ -1,0 +1,6 @@
+**
+//Start of the first git Test through text file//
+
+//Created this text file using the command line command "touch" <file name>
+
+//Opened this file to edit it's content but using the command 'start' <file name>
