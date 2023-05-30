@@ -1,0 +1,5 @@
+//secondaryBranch created in the git bash command line/ terminal
+    --Was able to push this branch from the bash terminal using:
+    --git push -u origin secondary
+//was able to create this text file in the secondary branch, but while on GitHub 
+//PLAN: to git pull to local machine from the secondary branch repository
