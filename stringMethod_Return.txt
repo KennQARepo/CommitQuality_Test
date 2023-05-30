@@ -1,0 +1,22 @@
+
+//Method with 'void' and without 'return'
+class HelloWorld {
+    public static void greet(String name){
+    System.out.println("Hello, " + name);   
+    }
+    public static void main(String[] args) {        
+        greet("World!");
+    }
+}
+
+//Method without 'void' and with 'return'
+class HelloWorld {
+    public static String greet(String name){
+    String text = "Hello, " + name;
+    return text;    
+    }
+    public static void main(String[] args) {
+        System.out.println(greet("World!"));
+        
+    }
+}
