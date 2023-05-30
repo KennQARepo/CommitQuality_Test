@@ -13,3 +13,16 @@
 //-u  - is the command to indicate this file is to be tracked.
 //origin -  is the labeling of the file and in this case it is the origin(al) file being tracked.
 //main - is the labeling of the branch the git command ('push' in this case/scenario) is being executed.
+
+//Editing text file from the GitHub repository 
+
+DISREGARD FOLLOWING NOTE IN multiple comment lines:
+/*(in actuality - was not able to edit textfile in github-repo, was redirected to github.dev; which is VSCode within the browser used while logged into GitHub)
+*/
+
+//Reason for this edit is to practice/learn/test the git command:
+	git pull
+this is to bring changes to your local machine, to HP Laptop.
+/*
+in this case - pulling edits and changes from GitHub.dev/ VSCode (in browser)
+*/
