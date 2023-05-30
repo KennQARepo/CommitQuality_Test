@@ -1,0 +1,5 @@
+//Text File used to Test,Practice, and Learn Git & GitHub.
+
+//Created this text file using the 'touch' command in the Git Bash command Line.
+//Text was created on the HP Laptop (meant ONLY for learning outside main/local networks).
+//Purpose of this text/test: To Learn and work with git and github from external workstation.
