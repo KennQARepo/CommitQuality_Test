@@ -3,3 +3,13 @@
 //Created this text file using the 'touch' command in the Git Bash command Line.
 //Text was created on the HP Laptop (meant ONLY for learning outside main/local networks).
 //Purpose of this text/test: To Learn and work with git and github from external workstation.
+
+
+//Learned the command: 'git push' - which is what push(es or send) the changes/ files to the repository (github).
+
+
+	git push -u origin main
+
+//-u  - is the command to indicate this file is to be tracked.
+//origin -  is the labeling of the file and in this case it is the origin(al) file being tracked.
+//main - is the labeling of the branch the git command ('push' in this case/scenario) is being executed.
