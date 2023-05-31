@@ -13,7 +13,9 @@ class HelloWorld {
 class HelloWorld {
     public static String greet(String name){
     String text = "Hello, " + name;
-    return text;    
+    return text;
+	//"SECOND TIME" - 'return' follow by the variable needed to print.
+	// In this case, (String) text - which returns the string.
     }
     public static void main(String[] args) {
         System.out.println(greet("World!"));
