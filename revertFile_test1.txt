@@ -1,0 +1,12 @@
+//Used file to test revert and reset function in git
+//files fileRevert_Test1.txt - Meant to me the first file with text
+//files fileRevert_Test2.txt - Second file created w/o text
+
+//Originated in pop-os/<user>/home/Documents/javaLearning/gitTest_Java <"javaLearningSecondary" branch>/ 
+
+//Intention is to commit and revert - to save file but commit to again
+	then to reset to remove as if file did not get committed or remove before creation
+	
+	
+	
+
