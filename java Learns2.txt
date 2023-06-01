@@ -1,0 +1,146 @@
+java_Learns2
+
+/**
+*
+*Try code in BlueJay_IDE
+*
+/
+
+import java.util.Scanner;
+
+class Main {  
+  public static void main(String args[]) {
+    Scanner scan = new Scanner(System.in);
+
+    
+    System.out.println("Hello, world! \nWould you like to play a small guessing game? \nYes or No"); 
+
+    String yesNo = scan.nextLine();
+
+      
+      if(yesNo.equalsIgnoreCase("Yes")){
+        System.out.println("Great, let's play! \nI'm thinking of a number between 1 and 10, what is it? \nYou have 3 tries.");
+        
+      int number = (int)(Math.random()*10);
+      for(int i = 0; i < 3; i++){
+        
+        int numGuess = scan.nextInt();
+          if(number == numGuess){
+            System.out.println("Yes! I was thinking of " + number);
+            play = false;
+            
+          }else if(i == 2){
+            System.out.println("Better luck next time.");
+          }else{
+            System.out.println("Nope, try again.");
+          }
+      }
+    }else{
+      play = false;
+      System.out.println("Maybe next time.");
+      
+      }
+    //}
+    System.out.println("Have a great day!");
+  } 
+}
+
+
+////Wrong code ---Fix it////
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Short or change?");
+        int change;
+        int price = (int)(Math.random()*20);
+        int payment = (int)(Math.random()*20);
+        
+        System.out.println("Item cost $" + price);
+        System.out.println("You paid $" + payment);
+        
+        while(price != payment || (price - payment != 0)){
+            if(payment > price){
+                change = payment - price;
+                System.out.println("Here is your change: $" + change);
+            }else if(price > payment){
+                change = price - payment;
+                System.out.println("You are short by $" + (change));
+                while(change > 0){
+                    //Scanner scan = new Scaner(System.in);
+                    int payment2 = (int)(Math.random()*change);
+                    change = change - payment2;
+                    
+                    if(change < 0){
+                        change = change * (-1);
+                        System.out.println("Here is your change $" + change);
+                    }else{
+                        //System.out.println("Thank you");
+                        System.out.println("You still owe $" + change);
+                    }
+                    
+                }
+            }
+        }
+        System.out.println("Thank you.");
+    }
+}
+
+
+///One Dollar total problem///
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.Scanner; 
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("You must give a total of $1 in change.");
+        
+        int amount;
+        double pennies = .25;
+        double nickels = .05;
+        double dimes = .10;
+        double quarters = .25;
+        double total = (pennies + nickels + dimes + quarters);
+        Scanner scan = new Scanner(System.in);
+        
+        while(total != 1 || total > 0 ){
+            System.out.print("Enter the amount of pennies you are giving: ");
+            amount = scan.nextInt();
+            pennies = pennies * amount;
+            System.out.println("You gave " + amount + " pennies; which is a total of " + pennies + " cents.");
+            
+            System.out.println("Enter the amount of nickels you are giving: ");
+            amount = scan.nextInt();
+            nickels = nickels * amount;
+            System.out.println("You gave " + amount + " nickels; which is a total of " + nickels + " cents.");
+            
+            System.out.println("Enter the amount of dimes you are giving: ");
+            amount = scan.nextInt();
+            dimes = dimes * amount;
+            System.out.println("You gave " + amount + " dimes; which is a total of " + dimes + " cents.");
+            
+            System.out.println("Enter the amount of quarters you are giving: ");
+            amount = scan.nextInt();
+            quarters = quarters * amount;
+            System.out.println("You gave " + amount + " quarters; which is a total of " + quarters + " cents.");
+            total = (pennies + nickels + dimes + quarters);
+            System.out.println("Total amount of change equals : $" + total);
+            if(total > 1){
+                System.out.println("Here is your change: $" + (total - 1));
+            }else if(total < 1){
+                System.out.println("You still owe: $" + (1 - total));
+            }else{
+                System.out.println("Thank you. You gave a total of $1.");
+            }
+        }
+        
+        
+        //scan.close();
+        
+    }
+}

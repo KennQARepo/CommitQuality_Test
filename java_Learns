@@ -268,6 +268,102 @@ public class Program {
     }
 }
 
+===Array Exercise _divisibleBy4===
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args) {
+        System.out.println("Array ");
+        Scanner scan = new Scanner(System.in);
+        
+        int x = 0, y = 0, z = 0;
+        int amount = scan.nextInt();
+        int[] dataSet = new int[amount];        
+        while(x < amount){
+            y = (int)(Math.random()*100);
+            dataSet[x] = y;
+            x++;
+            System.out.println("DataSet[" + x + "]" + " = " + y);
+            if(y % 4 == 0){
+                z = z + y;
+            }
+        }
+        System.out.println(z);
+    }
+}
+
+[][][][][]Array/Print consecutive elements as if it was an array in brackets[][][][]
+import java.util.Scanner;
+/*
+// Write a program that reads an array of ints and outputs the number of "triples" in the array.
+
+A "triple" is three consecutive ints in increasing order differing by 1 (i.e. 3,4,5
+is a triple, but 5,4,3
+and 2,4,6
+are not).
+
+OR
+
+Ex //
+
+A right rotation is an operation that shifts each element of an array to the right. For example, if an array is {1,2,3,4,5} and we right rotate it by 1, the new array will be {5,1,2,3,4}. If we rotate it by 2, the new array will be {4,5,1,2,3}. It goes like this: {1,2,3,4,5} -> {5,1,2,3,4} -> {4,5,1,2,3}.
+
+Write a program that performs a right rotation on an array by a given number.
+*/
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Write a program that reads an array of ints and outputs the number of \"triples\" in the array");
+        
+        int arrayLength = 3;
+        int[] array = new int[arrayLength];
+        //int y = scan.nextInt();;
+        int y = (int)(Math.random()*100);
+        System.out.print("{");
+        for(int x = 0; x < arrayLength; x++){
+            
+            array[x] = y;
+            y++;
+            //System.out.println("The array print's out {" + array[x] + ", ");
+            //System.out.print();
+            if(x <= 1){
+                System.out.print(array[x] + ", ");
+            }else {
+                System.out.print(array[x] + "}");    
+            }
+        }
+    }
+}
+
+
+
+import java.util.Scanner;
+public class ArrayBy4
+{
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       
+       int x = 0;
+       System.out.println("Length of array");
+       int length = scanner.nextInt();
+       int[] array =  new int[length];
+       
+       System.out.println("Element(s) of array");
+       for (int i = 0; i < length; i++) {
+           array[i] = scanner.nextInt();
+           
+           
+           if(array[i] % 4 == 0){
+               x = x + array[i];
+           }
+       }    
+       System.out.println(x);
+   }
+}
+
 
 //**//Loan Calculator//**// [Use a do loop]
 
@@ -540,3 +636,87 @@ public class EvenOfOddity {
 
 }
 
+Max method for a range over 2 integers
+public class MaxAmount{
+public static void main(String[] args){
+    //int x = 13, y = 7, z = 3;
+    int x = 2, y = 7, z = (int)(Math.random()*10);
+    System.out.println("Random number is " + z);
+    int large = Math.max(x,y);
+    int large2 = Math.max(y,z);
+    int large3 = Math.max(x,z);
+    //System.out.println(large);
+    boolean maxedOut = true;
+    while(maxedOut){
+        if(large >= large2 && large >= large3){
+            System.out.println(large +" is the max");
+        }else if(large2 >= large && large2 >= large3){
+            System.out.println(large2 +" is the max");
+        }/*
+        else if(large3 > large&&large2){
+            System.out.println(large3 +" is the max");
+        }*/
+        else{
+            System.out.println(large3 + " is the max");
+        }
+        maxedOut = false;
+    }
+    }
+} 
+
+import java.util.Scanner;
+/*
+Online Java - IDE, Code Editor, Compiler
+
+Online Java is a quick and easy tool that helps you to build, compile, test your programs online.
+*/
+
+public class Main
+{
+    public static void main(String[] args) {
+        System.out.println("Enter number to find its factorial");
+        Scanner scan = new Scanner(System.in);
+        int num = scan.nextInt();
+        int x = 1, y = 1, z = 1, i = 1;
+        while(x < num){
+            i = num*x;
+            num--;
+            x++;
+            y = y*i;
+            //System.out.println(y);
+        }
+        System.out.println(y);
+    }
+}
+
+/*
+===Capitalize the first letter of input//
+import java.util.Scanner;
+public class Untitled3{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        
+        //Capitalize the first letter of input//
+        String text = scan.nextLine();
+        int length = text.length();
+        text.substring(1).toUpperCase();
+        System.out.print(text.substring(0,1).toUpperCase());
+        System.out.print(text.substring(1,length).toLowerCase());
+*/
+        
+                int length = correctAnswer.length();
+        String[] correctAnswer4 = correctAnswer.split("");
+        for(int x = 0; x < length; x++){
+        //System.out.print(correctAnswer4[x]);// Using this would not sequentially work 
+            if(correctAnswer4[x].equals("c")){
+                
+                System.out.print(correctAnswer4[x].toUpperCase());
+                continue;
+            } if(correctAnswer4[x].equalsIgnoreCase("j")){
+                System.out.print(correctAnswer4[x].toUpperCase());
+                continue;
+            }
+            System.out.print(correctAnswer4[x]); 
+        }
+        
+        
