@@ -1,0 +1,32 @@
+
+public class FifthPowMethod
+{
+    public static double fifthPower(int num) {
+        double num2 = Math.pow(num, 5);
+        return num2;
+    }
+    public static double powerOfFifth (int num) {
+        double num2 = num * num * num * num * num;
+        return num2;
+    }
+    public static double methodOfFifth (int num) {
+        double num2 = 1;
+        for(int x = 0; x < 5; x++){
+            num2 *= num; 
+            //return num2;
+        }
+        return num2;
+    }
+    public static void main(String[] args) {
+        
+        int num = (int)(Math.random()*100);
+        /*
+        double thirdPower = Math.pow(num, 3);
+        double thePower = Math.abs(thirdPower * (-1));
+        //Math.abs = method/function to calculate the absolute value.
+        */
+        System.out.println(num + " = " + fifthPower(num));
+        System.out.println(num + " = " + powerOfFifth(num)); //This will sometimes generate a different result somehow; CREATE TEST THAT WILL CHECK IF THIS RESULT MATCHES THE SURROUNDING METHODS (fifthPower() && methodOfFifth())
+        System.out.println(num + " = " + methodOfFifth(num));
+    }
+}
