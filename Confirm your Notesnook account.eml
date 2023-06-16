@@ -1,0 +1,332 @@
+Received: from MW4PR04CA0369.namprd04.prod.outlook.com (2603:10b6:303:81::14)
+ by SA2PR02MB7564.namprd02.prod.outlook.com (2603:10b6:806:146::23) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6477.19; Thu, 8 Jun
+ 2023 22:22:17 +0000
+Received: from MW2NAM10FT012.eop-nam10.prod.protection.outlook.com
+ (2603:10b6:303:81:cafe::69) by MW4PR04CA0369.outlook.office365.com
+ (2603:10b6:303:81::14) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6455.33 via Frontend
+ Transport; Thu, 8 Jun 2023 22:22:17 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.27.193)
+ smtp.mailfrom=send.notesnook.com; dkim=pass (signature was verified)
+ header.d=notesnook.com;dmarc=pass action=none header.from=notesnook.com;
+Received-SPF: Pass (protection.outlook.com: domain of send.notesnook.com
+ designates 54.240.27.193 as permitted sender)
+ receiver=protection.outlook.com; client-ip=54.240.27.193;
+ helo=a27-193.smtp-out.us-west-2.amazonses.com; pr=C
+Received: from a27-193.smtp-out.us-west-2.amazonses.com (54.240.27.193) by
+ MW2NAM10FT012.mail.protection.outlook.com (10.13.154.222) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6477.27 via Frontend Transport; Thu, 8 Jun 2023 22:22:16 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=fjvjejs6u63illid6ivxvt5757scve2v; d=notesnook.com; t=1686262936;
+	h=From:Date:Subject:Message-Id:To:Reply-To:MIME-Version:Content-Type;
+	bh=wS69YjTMPHq+Fl/BP2y1mAS5LmS+Qwa3in1aC6xG/Tw=;
+	b=AAg8fI209jqUg81FX1SqieoF/aC+uC6YysgpERWmzFevuiY/WIcsGZ5eqEbjzIvp
+	3QfB3O4NtNWfOTCtUkrAZc6z9K/Y5xbp4uzKHImqUSdWrtG0JVaPQ472FI0alzw9bj0
+	U5CrwFLbuNZvB5lSJiA8U6KhgYH0DI4HZ1i5e/Hz6Lnmus6+IPLXODmtZVkYOSbZFrb
+	CzM33kP3bQgf3b2rV36xkA6lTPzZg3txi0JcpkeplOAhDhMBSl2GFQutW4eDpKIXXs9
+	0H1nzyTqf7/qT/KmIuSULAHNLx/TTNfEzJ8sVwkpmmh48puPh/KDlOjXGzwvtrDITOZ
+	3Xue5RPNLg==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1686262936;
+	h=From:Date:Subject:Message-Id:To:Reply-To:MIME-Version:Content-Type:Feedback-ID;
+	bh=wS69YjTMPHq+Fl/BP2y1mAS5LmS+Qwa3in1aC6xG/Tw=;
+	b=kFTo83nEroFWHaYOWAOnGtl4eafSkqZLux8F229STl3UyGo+wD8toL89vCwH0ezT
+	z3c4M4L8FkSRfAsEkUijn+gEyVlVgF6gpYgeArQGLeviqndPetWgQTbT30jngZrxjz3
+	6QXDf/xei0uMirZX0gwF/3Zd+mvRrlAUAWq+XUwU=
+From: Notesnook <support@notesnook.com>
+Date: Thu, 8 Jun 2023 22:22:16 +0000
+Subject: Confirm your Notesnook account
+Message-ID: <010101889d1a71eb-b2310586-30c2-4289-8ad2-0e32bfb56eb8-000000@us-west-2.amazonses.com>
+To: kenney.ley32@myhunter.cuny.edu
+Reply-To: Streetwriters <support@streetwriters.co>
+Content-Type: multipart/signed; boundary="=-1jMBwAfp8TzZVdfvsklVbA==";
+	protocol="application/pgp-signature"; micalg=pgp-sha256
+Feedback-ID: 1.us-west-2.7ZO5sB3Xtg3lz0SkEfDlj2fGCoCbJk5GCahKnQOL4cY=:AmazonSES
+X-SES-Outgoing: 2023.06.08-54.240.27.193
+Return-Path:
+ 010101889d1a71eb-b2310586-30c2-4289-8ad2-0e32bfb56eb8-000000@send.notesnook.com
+X-MS-Exchange-Organization-ExpirationStartTime: 08 Jun 2023 22:22:17.0012
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d02e9d0f-c93d-44a3-a46f-08db686ed149
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 2a1907c3-592c-40cb-8a88-7f2d40bd937a:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: MW2NAM10FT012:EE_|SA2PR02MB7564:EE_
+X-MS-Exchange-Organization-AuthSource:
+ MW2NAM10FT012.eop-nam10.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: d02e9d0f-c93d-44a3-a46f-08db686ed149
+X-MS-Exchange-AtpMessageProperties: SA|SL
+MIME-Version: 1.0
+
+--=-1jMBwAfp8TzZVdfvsklVbA==
+Content-Type: multipart/mixed; boundary="=-XgL3TEfkukRBB7B9OpVcBw=="
+
+--=-XgL3TEfkukRBB7B9OpVcBw==
+Content-Type: multipart/alternative; boundary="=-TJEniWoHErJZHM5Isamo5g=="
+
+--=-TJEniWoHErJZHM5Isamo5g==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Confirm your email to activate your Notesnook account.
+
+************
+Notesnook
+************
+
+Hey there!
+
+Thank you so much for signing up on Notesnook!
+
+Please confirm your Notesnook account by going to this link: http://auth.st=
+reetwriters.co/account/confirm?userId=3D64825494151c3e54106f9fbc&code=3DCfD=
+J8O%2FAHunLEDpJgj4Xb9seK6Vlzy9lUQFbrnTeJvbQ083eZusIPRP9RY1XR6nbgITKerBCtci1=
+qfxvZXNYYb4qAdbY6XltlabMkIS5zM%2Bc73N7rUtaZ8lh8Vz4BT2XwHG8sG2SM2mZO0wYDPZsH=
+e%2BQOhtcMwNdgAw0ZMKY3VQvYkGEYsZQKl303Is3TBJAuJp4D5F8unVCRo5lzGMluzgwrvqJxu=
+3ELLZUFRsje3RZTCPs&clientId=3Dnotesnook&type=3DCONFRIM_EMAIL.
+
+-----------
+
+This email has been sent to you because you signed up on Notesnook a servic=
+e of Streetwriters (Private) Ltd.
+1st Floor, Valley Plaza, Mardowal Chowk, Naushera
+Khushab, Punjab 41100 Pakistan=
+
+--=-TJEniWoHErJZHM5Isamo5g==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html data-editor-version=3D2 class=3Dsg-campaigns><head><me=
+ta charset=3Dutf-8><meta name=3Dviewport content=3D"width=3Ddevice-width, i=
+nitial-scale=3D1, minimum-scale=3D1, maximum-scale=3D1"><!--[if !mso]><!-->=
+<meta http-equiv=3DX-UA-Compatible content=3D"IE=3DEdge"><!--<![endif]--> <=
+!--[if (gte mso 9)|(IE)]> <xml> <o:officedocumentsettings> <o:allowpng> <o:=
+pixelsperinch>96</o:pixelsperinch> </o:officedocumentsettings> </xml> <![en=
+dif]--> <!--[if (gte mso 9)|(IE)]><style>body{width:600px;margin:0 auto}tab=
+le{border-collapse:collapse}table,td{mso-table-lspace:0;mso-table-rspace:0}=
+img{-ms-interpolation-mode:bicubic}</style><![endif]--><style>body,p,div{fo=
+nt-family:arial,helvetica,sans-serif;font-size:14px}body{color:#000000}body=
+ a{color:#1188e6;text-decoration:none}p{margin:0;padding:0}table.wrapper{wi=
+dth:100% !important;table-layout:fixed;-webkit-font-smoothing:antialiased;-=
+webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjus=
+t:100%}img.max-width{max-width:100% !important}.column.of-2{width:50%}.colu=
+mn.of-3{width:33.333%}.column.of-4{width:25%}ul ul ul ul{list-style-type:di=
+sc !important}ol ol{list-style-type:lower-roman !important}ol ol ol{list-st=
+yle-type:lower-latin !important}ol ol ol ol{list-style-type:decimal !import=
+ant}@media screen and (max-width:480px){.preheader .rightColumnContent,.foo=
+ter .rightColumnContent{text-align:left !important}.preheader .rightColumnC=
+ontent div,.preheader .rightColumnContent span,.footer .rightColumnContent =
+div,.footer .rightColumnContent span{text-align:left !important}.preheader =
+.rightColumnContent,.preheader .leftColumnContent{font-size:80% !important;=
+padding:5px 0}table.wrapper-mobile{width:100% !important;table-layout:fixed=
+}img.max-width{height:auto !important;max-width:100% !important}a.bulletpro=
+of-button{display:block !important;width:auto !important;font-size:80%;padd=
+ing-left:0 !important;padding-right:0 !important}.columns{width:100% !impor=
+tant}.column{display:block !important;width:100% !important;padding-left:0 =
+!important;padding-right:0 !important;margin-left:0 !important;margin-right=
+:0 !important}.social-icon-column{display:inline-block !important}}</style>=
+<style>@media screen and (max-width:480px){table\0{width:480px !important}}=
+</style><body><center class=3Dwrapper data-link-color=3D#1188E6 data-body-s=
+tyle=3D"font-size:14px; font-family:arial,helvetica,sans-serif; color:#0000=
+00; background-color:#FFFFFF;"><div class=3Dwebkit><table cellpadding=3D0 c=
+ellspacing=3D0 border=3D0 width=3D100% class=3Dwrapper bgcolor=3D#FFFFFF><t=
+r><td valign=3Dtop bgcolor=3D#FFFFFF width=3D100%><table width=3D100% role=3D=
+content-container class=3Douter align=3Dcenter cellpadding=3D0 cellspacing=3D=
+0 border=3D0><tr><td width=3D100%><table width=3D100% cellpadding=3D0 cells=
+pacing=3D0 border=3D0><tr><td><!--[if mso]><center><table><tr><td width=3D6=
+00><![endif]--><table width=3D100% cellpadding=3D0 cellspacing=3D0 border=3D=
+0 style=3Dwidth:100%;max-width:600px align=3Dcenter><tr><td role=3Dmodules-=
+container style=3D"padding:0 0 0 0;color:#000000;text-align:left" bgcolor=3D=
+#FFFFFF width=3D100% align=3Dleft><table class=3D"module preheader preheade=
+r-hide" role=3Dmodule data-type=3Dpreheader border=3D0 cellpadding=3D0 cell=
+spacing=3D0 width=3D100% style=3D"display:none !important;mso-hide:all;visi=
+bility:hidden;opacity:0;color:transparent;height:0;width:0"><tr><td role=3D=
+module-content><p>Confirm your email to activate your Notesnook account.</t=
+able><table class=3Dmodule role=3Dmodule data-type=3Dtext border=3D0 cellpa=
+dding=3D0 cellspacing=3D0 width=3D100% style=3Dtable-layout:fixed data-muid=
+=3D14957e19-e5cc-41de-b9a5-4ee51daed01f data-mc-module-version=3D2019-10-22=
+><tbody><tr><td style=3D"padding:0 0 0 0;line-height:40px;text-align:inheri=
+t" height=3D100% valign=3Dtop bgcolor=3D"" role=3Dmodule-content><div><h1 s=
+tyle=3Dtext-align:center>Notesnook</h1><div></div></div></table><table clas=
+s=3Dmodule role=3Dmodule data-type=3Dtext border=3D0 cellpadding=3D0 cellsp=
+acing=3D0 width=3D100% style=3Dtable-layout:fixed data-muid=3D47ff054b-8636=
+-4ba1-b9fc-a67b7bec8707 data-mc-module-version=3D2019-10-22><tbody><tr><td =
+style=3D"padding:18px 0 18px 0;line-height:22px;text-align:inherit" height=3D=
+100% valign=3Dtop bgcolor=3D"" role=3Dmodule-content><div><div style=3Dfont=
+-family:inherit;text-align:inherit>Hey there!</div><div style=3Dfont-family=
+:inherit;text-align:inherit><br></div><div style=3Dfont-family:inherit;text=
+-align:inherit>Thank you so much for signing up on Notesnook!</div><div sty=
+le=3Dfont-family:inherit;text-align:inherit><br></div><div style=3Dfont-fam=
+ily:inherit;text-align:inherit>Please confirm your email by clicking <a hre=
+f=3Dhttp://auth.streetwriters.co/account/confirm?userId=3D64825494151c3e541=
+06f9fbc&code=3DCfDJ8O%2FAHunLEDpJgj4Xb9seK6Vlzy9lUQFbrnTeJvbQ083eZusIPRP9RY=
+1XR6nbgITKerBCtci1qfxvZXNYYb4qAdbY6XltlabMkIS5zM%2Bc73N7rUtaZ8lh8Vz4BT2XwHG=
+8sG2SM2mZO0wYDPZsHe%2BQOhtcMwNdgAw0ZMKY3VQvYkGEYsZQKl303Is3TBJAuJp4D5F8unVC=
+Ro5lzGMluzgwrvqJxu3ELLZUFRsje3RZTCPs&clientId=3Dnotesnook&type=3DCONFRIM_EM=
+AIL>here</a>.</div><div></div></div></table><table border=3D0 cellpadding=3D=
+0 cellspacing=3D0 class=3Dmodule data-role=3Dmodule-button data-type=3Dbutt=
+on role=3Dmodule style=3Dtable-layout:fixed width=3D100% data-muid=3Dbe84da=
+a7-3077-40d3-9592-f8de5d03c0cf><tbody><tr><td align=3Dcenter bgcolor=3D"" c=
+lass=3Douter-td style=3D"padding:5px 0 5px 0"><table border=3D0 cellpadding=
+=3D0 cellspacing=3D0 class=3Dwrapper-mobile style=3Dtext-align:center><tbod=
+y><tr><td align=3Dcenter bgcolor=3D#000000 class=3Dinner-td style=3Dborder-=
+radius:6px;font-size:16px;text-align:center;background-color:inherit><a hre=
+f=3Dhttp://auth.streetwriters.co/account/confirm?userId=3D64825494151c3e541=
+06f9fbc&code=3DCfDJ8O%2FAHunLEDpJgj4Xb9seK6Vlzy9lUQFbrnTeJvbQ083eZusIPRP9RY=
+1XR6nbgITKerBCtci1qfxvZXNYYb4qAdbY6XltlabMkIS5zM%2Bc73N7rUtaZ8lh8Vz4BT2XwHG=
+8sG2SM2mZO0wYDPZsHe%2BQOhtcMwNdgAw0ZMKY3VQvYkGEYsZQKl303Is3TBJAuJp4D5F8unVC=
+Ro5lzGMluzgwrvqJxu3ELLZUFRsje3RZTCPs&clientId=3Dnotesnook&type=3DCONFRIM_EM=
+AIL style=3D"background-color:#000000;border:1px solid #333333;border-color=
+:#333333;border-radius:5px;border-width:1px;color:#ffffff;display:inline-bl=
+ock;font-size:14px;font-weight:normal;letter-spacing:0;line-height:normal;p=
+adding:12px 18px 12px 18px;text-align:center;text-decoration:none;border-st=
+yle:solid" target=3D_blank>Confirm Email</a></table></table><table class=3D=
+module role=3Dmodule data-type=3Ddivider border=3D0 cellpadding=3D0 cellspa=
+cing=3D0 width=3D100% style=3Dtable-layout:fixed data-muid=3Daca25e2b-4cbf-=
+43ae-b606-419fa0702f66><tbody><tr><td style=3D"padding:0 0 0 0" role=3Dmodu=
+le-content height=3D100% valign=3Dtop bgcolor=3D""><table border=3D0 cellpa=
+dding=3D0 cellspacing=3D0 align=3Dcenter width=3D100% height=3D1px style=3D=
+line-height:1px;font-size:1px><tbody><tr><td style=3D"padding:0 0 1px 0" bg=
+color=3D#dbdbdb></table></table><table class=3Dmodule role=3Dmodule data-ty=
+pe=3Dtext border=3D0 cellpadding=3D0 cellspacing=3D0 width=3D100% style=3Dt=
+able-layout:fixed data-muid=3D5e37834f-be09-4696-a807-ae46f2725837 data-mc-=
+module-version=3D2019-10-22><tbody><tr><td style=3D"padding:18px 0 18px 0;l=
+ine-height:22px;text-align:inherit" height=3D100% valign=3Dtop bgcolor=3D""=
+ role=3Dmodule-content><div><div style=3Dfont-family:inherit;text-align:cen=
+ter><span style=3D"font-family:arial,helvetica,sans-serif;font-style:normal=
+;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;let=
+ter-spacing:normal;orphans:2;text-align:start;text-indent:0;text-transform:=
+none;white-space:pre-wrap;widows:2;word-spacing:0;-webkit-text-stroke-width=
+:0;background-color:rgb( 255,255,255 );text-decoration-thickness:initial;te=
+xt-decoration-style:initial;text-decoration-color:initial;float:none;displa=
+y:inline;color:#444444;font-size:11px">This email has been sent to you beca=
+use you signed up on </span><span style=3D"font-family:arial,helvetica,sans=
+-serif;font-style:normal;font-variant-ligatures:normal;font-variant-caps:no=
+rmal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-=
+indent:0;text-transform:none;white-space:pre-wrap;widows:2;word-spacing:0;-=
+webkit-text-stroke-width:0;background-color:rgb( 255,255,255 );text-decorat=
+ion-thickness:initial;text-decoration-style:initial;text-decoration-color:i=
+nitial;float:none;display:inline;font-size:11px;color:#000000">Notesnook</s=
+pan><span style=3D"font-family:arial,helvetica,sans-serif;font-style:normal=
+;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;let=
+ter-spacing:normal;orphans:2;text-align:start;text-indent:0;text-transform:=
+none;white-space:pre-wrap;widows:2;word-spacing:0;-webkit-text-stroke-width=
+:0;background-color:rgb( 255,255,255 );text-decoration-thickness:initial;te=
+xt-decoration-style:initial;text-decoration-color:initial;float:none;displa=
+y:inline;color:#444444;font-size:11px"> a service of Streetwriters (Private=
+) Ltd.</span></div><div style=3Dfont-family:inherit;text-align:center><span=
+ style=3D"box-sizing:border-box;padding-top:0;padding-right:0;padding-botto=
+m:0;padding-left:0;margin-top:0;margin-right:0;margin-bottom:0;margin-left:=
+0;font-style:inherit;font-variant-ligatures:inherit;font-variant-caps:inher=
+it;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-weight=
+:inherit;font-stretch:inherit;line-height:20px;font-family:inherit;vertical=
+-align:baseline;border-top-width:0;border-right-width:0;border-bottom-width=
+:0;border-left-width:0;border-top-style:initial;border-right-style:initial;=
+border-bottom-style:initial;border-left-style:initial;border-top-color:init=
+ial;border-right-color:initial;border-bottom-color:initial;border-left-colo=
+r:initial;border-image-source:initial;border-image-slice:initial;border-ima=
+ge-width:initial;border-image-outset:initial;border-image-repeat:initial;co=
+lor:#444444;letter-spacing:normal;orphans:2;text-align:center;text-indent:0=
+;text-transform:none;white-space:normal;widows:2;word-spacing:0;-webkit-tex=
+t-stroke-width:0;background-color:rgb( 255,255,255 );text-decoration-thickn=
+ess:initial;text-decoration-style:initial;text-decoration-color:initial;fon=
+t-size:11px">1st Floor, Valley Plaza, Mardowal Chowk, Naushera</span></div>=
+<div style=3Dfont-family:inherit;text-align:center><span style=3D"box-sizin=
+g:border-box;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;=
+margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;font-style:inheri=
+t;font-variant-ligatures:inherit;font-variant-caps:inherit;font-variant-num=
+eric:inherit;font-variant-east-asian:inherit;font-weight:inherit;font-stret=
+ch:inherit;line-height:20px;font-family:inherit;vertical-align:baseline;bor=
+der-top-width:0;border-right-width:0;border-bottom-width:0;border-left-widt=
+h:0;border-top-style:initial;border-right-style:initial;border-bottom-style=
+:initial;border-left-style:initial;border-top-color:initial;border-right-co=
+lor:initial;border-bottom-color:initial;border-left-color:initial;border-im=
+age-source:initial;border-image-slice:initial;border-image-width:initial;bo=
+rder-image-outset:initial;border-image-repeat:initial;color:#444444;letter-=
+spacing:normal;orphans:2;text-align:center;text-indent:0;text-transform:non=
+e;white-space:normal;widows:2;word-spacing:0;-webkit-text-stroke-width:0;ba=
+ckground-color:rgb( 255,255,255 );text-decoration-thickness:initial;text-de=
+coration-style:initial;text-decoration-color:initial;font-size:11px">Khusha=
+b,</span><span style=3Dfont-size:11px> </span><span style=3D"box-sizing:bor=
+der-box;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;margi=
+n-top:0;margin-right:0;margin-bottom:0;margin-left:0;font-style:inherit;fon=
+t-variant-ligatures:inherit;font-variant-caps:inherit;font-variant-numeric:=
+inherit;font-variant-east-asian:inherit;font-weight:inherit;font-stretch:in=
+herit;line-height:20px;font-family:inherit;vertical-align:baseline;border-t=
+op-width:0;border-right-width:0;border-bottom-width:0;border-left-width:0;b=
+order-top-style:initial;border-right-style:initial;border-bottom-style:init=
+ial;border-left-style:initial;border-top-color:initial;border-right-color:i=
+nitial;border-bottom-color:initial;border-left-color:initial;border-image-s=
+ource:initial;border-image-slice:initial;border-image-width:initial;border-=
+image-outset:initial;border-image-repeat:initial;color:#444444;letter-spaci=
+ng:normal;orphans:2;text-align:center;text-indent:0;text-transform:none;whi=
+te-space:normal;widows:2;word-spacing:0;-webkit-text-stroke-width:0;backgro=
+und-color:rgb( 255,255,255 );text-decoration-thickness:initial;text-decorat=
+ion-style:initial;text-decoration-color:initial;font-size:11px">Punjab</spa=
+n><span style=3Dfont-size:11px> </span><span style=3Dcolor:#444444;font-siz=
+e:11px>41100 Pakistan</span></div><div></div></div></table></table><!--[if =
+mso]></table></table></table></div></center><![endif]-->=
+
+--=-TJEniWoHErJZHM5Isamo5g==--
+
+--=-XgL3TEfkukRBB7B9OpVcBw==
+Content-Type: application/octet-stream; name=notesnook_pub.asc
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename=notesnook_pub.asc
+
+LS0tLS1CRUdJTiBQR1AgUFVCTElDIEtFWSBCTE9DSy0tLS0tClZlcnNpb246IEJDUEcgQyMgdjEu
+OS4wLjAKCm1RR05CR09Vbm9BQkRBQyt3VHJaeTY5V1cvZXlwUHBmQ0FrdnN2UXJ3TmQ2R2pBQXl2
+bjhoOEZDazkvYXZEcTgKV25DUGdKa1BjMDJsWUVxaEYxUXlmcjdPY2N2NHpnOHdaY2NDT01EcHRU
+MUJJYTJyTW5raHdJbS81ZHYwdm15WAowdFM2NmcrODdQYkNXL1puajVoMm9oMGhmT3ErMEtKZ3JM
+V2NIKy82ajZUV1Q2eWE3OEpXcXBJUUl0c3J2VzRMClk5VFBRTnRSWU15K0Z5YkNWcUxDUjF6bFlQ
+ZWZuUFNCK0N5c0dnWGZmZVQ0VE13RnpsaHNTYURZM3lGUFRDVDEKbCtrUFo2Y1JzUkJIMjUxN3pr
+Sm5MUHZuL3pJT245Q25kZW93V2F0WVFMUXQ5M1U3SzFtTU1CeGoyaHlOUFRlcwpHZkhyTDN1c1Fz
+YjdkaURRdmRtSG9GUGl3N3BHSXBxNzI0clYzREtlR3BBQ2FmcjRUTS80cDdmWWs0Mko4cmI0CnlO
+OGNNRFZ4N0lXYWFGOUxNb0RYcTROeWdpOGhrRExNM3orSC9QZkJ5VHVDVVNnMitPZk9uR2ZpbE1h
+Y0xhdWEKSHUwb1J5aUlTcmJKS1BLckhiempSNm5JbStldC92eWVBMk9zdFFwWENzMk0zWlA2L2p2
+NEVMRURPTXlnNFAzRApOQWV6QThPL0Z4c1JHNU1BRVFFQUFiUWhUbTkwWlhOdWIyOXJJRHh6ZFhC
+d2IzSjBRRzV2ZEdWemJtOXZheTVqCmIyMCtpUUhVQkJNQkNnQStGaUVFdVVpdGo3QUxJWDZWeTdm
+UzlIVllLK3VHSWRVRkFtT1Vub0FDR3dNRkNRUEMKWndBRkN3a0lCd0lHRlFvSkNBc0NCQllDQXdF
+Q0hnRUNGNEFBQ2drUTlIVllLK3VHSWRWdzBRdjdCUXhNOXl1ZApJbTRSa1ZoNFhyQ256Y1RPVWho
+clhyRVl2VFBCUXNXVDBzNjAyVy9BSXBBdzA0TW95RnBHRUFjRWRqTVFJR1dOClh1KzBKRkpObldS
+RU5KdGJ1R3h3cTdHaTA3NVNTK0lNUkJRZ2JQa1Bkb2xLSDJ3MmV5eXdjZi8xNjVPTmJYWC8KUTRM
+WDBXSUxadFBYRVhHTlROb0phSUZxWUsrV0k4MUVZblBPL2NDVllCbWo2a1lmcFdaczcwUDFXUTho
+Uy8xZAo1MkttR24zeXZ5TWh6STM3K0p2SFVqRGxsVEw3QTc1d1hNRjc4VTYySnY4em1RUU9yN25X
+dStiN2Qybm05dCtHCkZCak1aOEtaWnNBTk1uVkVvOEErbi9oalZEQ25zVFpXenpxWlFLb0REcHBz
+YVREVVdweXlZS1YrYzZQd2VtdmMKZyt4YkhZbzAzd2lBamwvQXlZTTlITm9QTGUyVHNJZU92bGx1
+dXFXZm1QMVpnWHdYcldIekxqeXNRNGc3R2ZtRQpBRHJXYXVEc3JBYmFOcExucldOV1RPcm8wQkVz
+NUZ0WExHZUYwQnZEOG0xdDlhK3BiQitMQms5MncyRjFwb251Ck5acHJYK0E0TXd0SWZybEZRSisx
+MHpFUkdBb2NWUGF3Ymw2blAzUHJDRm1YNEtlcDErQmZRMVZlCj1tdjY1Ci0tLS0tRU5EIFBHUCBQ
+VUJMSUMgS0VZIEJMT0NLLS0tLS0K
+
+--=-XgL3TEfkukRBB7B9OpVcBw==--
+
+--=-1jMBwAfp8TzZVdfvsklVbA==
+Content-Type: application/pgp-signature; name=signature.asc
+Content-Disposition: attachment; filename=signature.asc
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNATURE-----
+
+iQGcBAEBCAAGBQJkglSXAAoJEPR1WCvrhiHVgM0L/12IjdTUNJfZad/SmUCKezXE
+1AGs5epP3EIqafVgnlXdm9g3RV1tBdsXU0qX58a1aPdPNTGnben1SqijPdgWLNSN
+I4J87rGVvs2jHwxl5YIMy3D5g9tl/JcpmbJHCCAY/XgdzjoSthfOarvOEoUvPuC5
+o4b3uenuDsgW8oOYjHjk6uF7ZgTAmE5t3dI8fcm0QB8AZ3+eLF09pirtbVTEAncN
++4Gq1pnOCvxj5b9a2dgKauWUMXqcUyrCF2Ybko2231LoAjpLEFbcBbubB5Jb1vyS
+NDfv/cGyfde3RcTat32r4sUcDqa44IlFx6a5GXWRsha3ZlKyx1ZKgWZoftP4tX1v
+EHhil9d/laK+uu1ZKyWHOkwxsDm7IWKE8Jry8sGM2k5l3AOKvrcMPYsqGkykm/5S
+a+gnZsFVXMNYJAKCuaIl3DjlVy+RWIeeuMpwnsPPsSIAtsvH1ArpBk7i0WTz3ww2
+9jGRcDFIUHrsOYgr92wp0NdiudGRol90Rdk1FdlKuw==
+=wYDG
+-----END PGP SIGNATURE-----
+
+--=-1jMBwAfp8TzZVdfvsklVbA==--
