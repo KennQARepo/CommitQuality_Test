@@ -1,0 +1,39 @@
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class HelloSeleniumTest {
+
+    @BeforeEach
+    public void preTest() {
+    //WebDriverManager.chromedriver().setup();
+    WebDriverManager.firefoxdriver().setup();
+    }
+
+
+    @Test
+    public void firstTest() {
+        //Tells System where to find the chromedriver.
+        //On windows the path requires the inclusion of the .exe extension ex. :"System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");"
+        //The following is used for iOS (writing/building this on Linux)
+        //System.setProperty("webdriver.chrome.driver","resources/chromedriver");
+        //System.setProperty("webdriver.chrome.driver","resources/chrome");
+        System.setProperty("webdriver.firefox.driver","resources/firefoxdev");
+        //WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
+
+        //Declare a String variable using a URL
+        String sutURL = "https://bonigarcia.dev/selenium-webdriver-java/";
+
+        //Open Browser and GET url
+        driver.get(sutURL);
+
+        //Kills/Closes/QUIT browser
+        driver.quit();
+    }
+}
+
