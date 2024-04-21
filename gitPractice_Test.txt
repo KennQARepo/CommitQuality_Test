@@ -1,2 +1,4 @@
 //Practice Git on Ubuntu v23.04
 //Practice via CommitQuality Tutorial
+
+//Making Edit and will test/practice a GIT PULL command to LOCAL
