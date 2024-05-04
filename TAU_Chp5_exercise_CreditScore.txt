@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Main{
+    //Initializing the Requirements/What we know
+    static double requiredSalary = 25000;
+    static int requiredCreditScore = 750;
+    //static is required for the global access of the scanner instances
+    static Scanner scan = new Scanner(System.in);
+    
+    public static void main(String[] args){
+        System.out.println("Let's process your application to find out if you are eligible, based on the info. you can provide for us.");
+        double yearGross = annualPay();
+        int creditKarma = creditScore();
+	boolean applicationResult = processingApplication(yearGross, creditKarma);
+        eligibility(applicationResult);
+        
+        
+    }
+    //Obtain what we do not know - Applicants Salary
+    public static double annualPay(){
+        System.out.println("Enter your Annual Salary:");
+        double yearGross = scan.nextDouble();
+        return yearGross;
+    }
+    //Process if the input of the Applicant
+    public static boolean processingApplication(double salary, int creditReport){
+        boolean pending;
+        if(salary >= requiredSalary && creditReport >= requiredCreditScore){
+           pending = true;
+        }else{
+           pending = false;
+        }
+        return pending;
+    }
+    //Check if the Applicant is eligible
+    public static void eligibility(boolean process){
+        System.out.println("System processing...");
+        if(process == true){
+            System.out.println("Approved!");
+        }else{
+            System.out.println("DENIED!!!");
+        }
+    }
+    //Obtain what we do not know - Applicants Credit Score
+    public static int creditScore (){
+        System.out.println("Enter your Credit Score");
+        int karmaScore = scan.nextInt();
+        return karmaScore;
+    }
+}
